@@ -15,11 +15,11 @@ public class EtudiantController {
 	 @Autowired
 	    private EtudiantService etudiantService;
 	 
-	 @GetMapping
-	    public ResponseEntity<List<Etudiant>> getAllStudents(
-	            @RequestParam(required = false) String className,
-	            @RequestParam(required = false) String teacherLastName) {
-	        return ResponseEntity.ok(etudiantService.getAllStudents(className, teacherLastName));
-	    }
+	 @GetMapping("/list")
+	 public ResponseEntity<List<Etudiant>> getAllStudents(
+	     @RequestParam(required = false) String classeNom,
+	     @RequestParam(required = false) String classeEnsNom) {
+	     return ResponseEntity.ok(etudiantService.getAllStudents(classeNom, classeEnsNom));
+	 }
 
 }

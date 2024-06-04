@@ -2,12 +2,14 @@ package gestionScolaire.BackEnd.entites;
 
 import java.io.Serializable;
 
-import jakarta.persistence.DiscriminatorValue;
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 
 @Entity
 public class Enseigant extends Personne{
-
+  
+	
+	@OneToOne
+    private Classe classe ;
 	
 
 }

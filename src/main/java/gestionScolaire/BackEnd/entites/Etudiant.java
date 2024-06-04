@@ -2,16 +2,15 @@ package gestionScolaire.BackEnd.entites;
 
 import java.io.Serializable;
 
-import jakarta.persistence.DiscriminatorValue;
-import jakarta.persistence.Entity;
+import org.hibernate.annotations.ManyToAny;
+
+import jakarta.persistence.*;
 
 @Entity
-@DiscriminatorValue("ETU")
 public class Etudiant extends Personne  {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+	
+	@ManyToOne
+	private Classe classe;
+	
 
 }

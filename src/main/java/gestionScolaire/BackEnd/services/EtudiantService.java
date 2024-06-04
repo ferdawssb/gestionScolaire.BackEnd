@@ -16,7 +16,8 @@ public class EtudiantService {
 	
 	 public List<Etudiant> getAllStudents(String className, String teacherLastName) {
 	        if (className != null && teacherLastName != null) {
-	            return etudiantRepositorie.findByClasseNomAndClasseEnsNom(className,teacherLastName);
+	            return null;
+	            /*etudiantRepositorie.findByClasseNomAndClasseNomEnsNom(className,teacherLastName);*/
 	        } else if (className != null) {
 	            return etudiantRepositorie.findByClasseNom(className);
 	        } else if (teacherLastName != null) {
